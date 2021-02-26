@@ -1,0 +1,31 @@
+更新日志：
+    v1.1        增加电机模块
+                    使用方法：1、导入模块：from motor import motor  2、调用函数：motor(value)   value取值范围(-1023,1023)
+    v1.2        增加语音识别
+                    使用方法：1、导入模块：import voice  2、调用函数：voice.get_voice_id()   返回值为(1-14)，分别对应  1-你好；2-开灯；3-关灯；4-启动；5-停止；6-加速；7-减速；8-前进；9-后退；10-显示随机数；11-你是谁；12-画彩虹；13-画笑脸；14-画流水灯  
+    v1.3        增加舵机模块    
+                    使用方法：1、导入模块：import servo     2、调用函数：servo.angle(value)      value取值范围（0，180）
+    v1.4        更改led模块的on()函数
+                    使用方法：1、导入模块：import led     2、调用函数1：led.color(r,g,b)    r,g,b取值范围均为（0，255）
+    v1.5        把neo_img并入neo_color
+                    使用方法:neo_color.set_rainbow(g,t,x,n)
+    v1.6        更改led模块封装：
+                    1、led.on(r,g,b)修改为led.on(),只进行开灯操作
+                    2、增加led.colors(r,g,b)，更改彩灯颜色，r,g,b取值范围为(0,255)
+    v1.7        neo_color库更名为neo：
+		neo_color.setup((1,2,3))变更为neo.init((neo.RING,neo.ARRAY,neo.BELT))
+		neo_color.set_xy变更为neo.array_xy
+		neo_color.set_rainbow变更为neo.flash
+		neo_color.set_pixel变更为neo.pixel
+		neo_color.set_pixel_range变更为neo.pixel_range
+	   motor.motor变更为motor.power
+	   clock.time变更为clock.get_time
+	   touch.get变更为touch.value
+	   bmp.get_p变更为bmp.value_p	bmp.get_t变更为bmp.value_t		bmp.get_a变更为bmp.value_a
+	   led.colors变更为led.color
+	   temp_humi增加新功能：
+		temp_humi.value_t,与temp_humi.temp功能相同
+		temp_humi.value_t,与temp_humi.humi功能相同
+		temp_humi.vaule_th与temp_humi.temp_humi功能相同
+	修复bug
+		
